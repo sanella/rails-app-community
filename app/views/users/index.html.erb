@@ -1,0 +1,18 @@
+<style>
+  .flash{
+    color: red;
+  }
+ </style>
+<h1>This is user page, and this is list of users:</h1>
+<% unless flash[:notice].nil? %>
+    <div class="flash"><%= flash[:notice] %></div>
+<% end %>
+<div>
+  <% @users.each do |user| %>
+    <p>Name: <%= user.name %>, <%= user.surname %>, <%= user.email %>, <%= user.id %></p>
+      <%= link_to 'Edit', (edit_user_path(user))%>
+      <%= link_to 'User details', (user_path(user))%>
+      <%= link_to 'Delete User', (user_path(user)), method: :delete %>
+  <% end %>
+</div>
+

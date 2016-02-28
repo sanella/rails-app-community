@@ -1,0 +1,10 @@
+<h1>This is product <%= @event.name %></h1>
+<% unless flash[:notice].nil? %>
+    <div><%= flash[:notice] %></div>
+<% end %>
+
+<h3>Product information</h3>
+<p><%= @event.image %></p>
+<p><%= @event.description %></p>
+<p>Date: <%= @event.date %></p>
+<p><%= link_to 'Delete event', event_path(@event),method: :delete %></p>
