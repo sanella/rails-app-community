@@ -10,7 +10,9 @@
       name: 'Sanela',
       surname: 'Grcic',
       username: 'sanela',
-      email: 'sanela@gmail.com'
+      email: 'sanela@gmail.com',
+      password: 'Test123',
+      role: 'admin'
   )
 #end
 

@@ -9,7 +9,7 @@
 <% end %>
 <div>
   <% @users.each do |user| %>
-    <p>Name: <%= user.name %>, <%= user.surname %>, <%= user.email %>, <%= user.id %></p>
+    <p>Name: <%= user.name %>, <%= user.surname %>, <%= user.email %>, <%= user.id %>, pass: <%= user.password_digest %></p>
       <%= link_to 'Edit', (edit_user_path(user))%>
       <%= link_to 'User details', (user_path(user))%>
       <%= link_to 'Delete User', (user_path(user)), method: :delete %>
